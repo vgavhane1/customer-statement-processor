@@ -42,7 +42,7 @@ public class CustomXMLParser {
 	        for(CustomerStatementRecord customerStatementRecord : customerStatementRecordList)
 	        	logger.debug(customerStatementRecord.getAccountNumber());
 	    } catch (ParserConfigurationException | SAXException | IOException e) {
-	        e.printStackTrace();
+	       logger.error(e.getMessage());
 	    }
 		return customerStatementRecordList;
 	}

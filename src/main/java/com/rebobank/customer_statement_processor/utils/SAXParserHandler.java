@@ -10,8 +10,11 @@ import org.xml.sax.helpers.DefaultHandler;
 
 import com.rebobank.customer_statement_processor.model.CustomerStatementRecord;
 
-//import com.rebobank.customer_statement_processor.model.XMLCustomerStatementRecord;
-
+/**
+ * Customized SAX Parser Handler which can be used to parse user provided XML file
+ * @author vgavhane
+ *
+ */
 
 @Component
 public class SAXParserHandler extends DefaultHandler {

@@ -10,12 +10,10 @@ import java.util.Set;
 
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
 
 import com.rebobank.customer_statement_processor.dto.CustomerStatementDto;
 import com.rebobank.customer_statement_processor.dto.CustomerStatementProcessorReportDto;
-import com.rebobank.customer_statement_processor.exception.CustomerStatementProcessorException;
 import com.rebobank.customer_statement_processor.model.CustomerStatementRecord;
 import com.rebobank.customer_statement_processor.utils.CustomCSVParser;
 import com.rebobank.customer_statement_processor.utils.CustomXMLParser;
@@ -48,6 +46,8 @@ public class CustomerStatementProcessorServiceImpl implements CustomerStatementP
 						+ " is not unique!!";
 				logger.error(errorMessage);
 				report.put(CustomerStatementRecord.getTransactionReference(), errorMessage);
+
+				//Note - We are not throwing below exception as we are generating the report in json format in case customer statements get failed during validation.
 				//throw new CustomerStatementProcessorException(HttpStatus.BAD_REQUEST, errorMessage);
 			}
 		}
@@ -62,7 +62,7 @@ public class CustomerStatementProcessorServiceImpl implements CustomerStatementP
 	@Override
 	public CustomerStatementDto validateEndBalance(List<CustomerStatementRecord> CustomerStatementRecords, CustomerStatementDto customerStatementDto) {
 		Set<Long> transactionReferencesSet = new HashSet<Long>();
-		LinkedHashMap<Long, String> report = new LinkedHashMap<Long, String>();
+		LinkedHashMap<Long, String> report = customerStatementDto.getCustomerStatementProcessorReportDto().getReport();
 		String errorMessage = "";
 		for (CustomerStatementRecord CustomerStatementRecord : CustomerStatementRecords) {
 			logger.info("For transction reference::" + CustomerStatementRecord.getTransactionReference());
@@ -88,6 +88,8 @@ public class CustomerStatementProcessorServiceImpl implements CustomerStatementP
 			errorMessage = "Transaction references::" + transactionReferencesSet
 					+ " is not having valid end balance!!";
 			logger.error(errorMessage);
+
+			//Note- We are not throwing below exception as we are generating the report in json format in case customer statements get failed during validation.
 			//throw new CustomerStatementProcessorException(HttpStatus.BAD_REQUEST, errorMessage);
 		}
 		

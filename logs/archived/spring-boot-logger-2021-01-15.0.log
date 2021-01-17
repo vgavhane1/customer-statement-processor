@@ -1,0 +1,301 @@
+2021-01-15 21:09:01,595 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.1.6.Final
+2021-01-15 21:09:01,605 INFO org.springframework.boot.StartupInfoLogger [main] Starting CustomerStatementProcessorApplication using Java 1.8.0_191 on C02XG1J8JG5M with PID 14706 (/Users/vgavhane/Downloads/customer_statement_processor/target/classes started by vgavhane in /Users/vgavhane/Downloads/customer_statement_processor)
+2021-01-15 21:09:01,606 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-01-15 21:09:02,397 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8070 (http)
+2021-01-15 21:09:02,404 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8070"]
+2021-01-15 21:09:02,404 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2021-01-15 21:09:02,405 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-01-15 21:09:02,451 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2021-01-15 21:09:02,452 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 802 ms
+2021-01-15 21:09:02,655 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-15 21:09:02,771 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8070"]
+2021-01-15 21:09:02,796 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8070 (http) with context path ''
+2021-01-15 21:09:02,804 INFO org.springframework.boot.StartupInfoLogger [main] Started CustomerStatementProcessorApplication in 1.498 seconds (JVM running for 1.948)
+2021-01-15 21:09:12,508 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8070-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-15 21:09:12,509 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8070-exec-1] Initializing Servlet 'dispatcherServlet'
+2021-01-15 21:09:12,510 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8070-exec-1] Completed initialization in 0 ms
+2021-01-15 21:09:12,561 INFO com.rebobank.customer_statement_processor.controller.CustomerStatementProcessorController [http-nio-8070-exec-1] Parsing csv file ..records.csv
+2021-01-15 21:25:29,993 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2021-01-15 21:25:37,896 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.1.6.Final
+2021-01-15 21:25:37,907 INFO org.springframework.boot.StartupInfoLogger [main] Starting CustomerStatementProcessorApplication using Java 1.8.0_191 on C02XG1J8JG5M with PID 14953 (/Users/vgavhane/Downloads/customer_statement_processor/target/classes started by vgavhane in /Users/vgavhane/Downloads/customer_statement_processor)
+2021-01-15 21:25:37,909 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-01-15 21:25:38,723 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8070 (http)
+2021-01-15 21:25:38,733 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8070"]
+2021-01-15 21:25:38,734 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2021-01-15 21:25:38,734 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-01-15 21:25:38,793 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2021-01-15 21:25:38,794 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 829 ms
+2021-01-15 21:25:39,008 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-15 21:25:39,156 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8070"]
+2021-01-15 21:25:39,232 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8070 (http) with context path ''
+2021-01-15 21:25:39,247 INFO org.springframework.boot.StartupInfoLogger [main] Started CustomerStatementProcessorApplication in 1.623 seconds (JVM running for 2.198)
+2021-01-15 21:26:00,772 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8070-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-15 21:26:00,773 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8070-exec-2] Initializing Servlet 'dispatcherServlet'
+2021-01-15 21:26:00,774 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8070-exec-2] Completed initialization in 0 ms
+2021-01-15 21:26:00,820 INFO com.rebobank.customer_statement_processor.controller.CustomerStatementProcessorController [http-nio-8070-exec-2] Parsing csv file ..records.csv
+2021-01-15 21:26:00,893 INFO com.rebobank.customer_statement_processor.service.CustomerStatementProcessorServiceImpl [http-nio-8070-exec-2] Validating unique transction references...
+2021-01-15 21:26:00,894 ERROR com.rebobank.customer_statement_processor.service.CustomerStatementProcessorServiceImpl [http-nio-8070-exec-2] Transaction reference::112806 is not unique!!
+2021-01-15 21:26:38,972 INFO com.rebobank.customer_statement_processor.controller.CustomerStatementProcessorController [http-nio-8070-exec-4] Parsing csv file ..records.xml
+2021-01-15 21:26:39,002 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8070-exec-4] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.RuntimeException: Error parsing CSV line: 5. [    <startBalance>26.9</startBalance>]] with root cause
+java.lang.NumberFormatException: For input string: "<startBalance>26.9</startBalance>"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Long.parseLong(Long.java:589)
+	at java.lang.Long.<init>(Long.java:965)
+	at org.apache.commons.beanutils.converters.NumberConverter.toNumber(NumberConverter.java:438)
+	at org.apache.commons.beanutils.converters.NumberConverter.convertToType(NumberConverter.java:271)
+	at org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:169)
+	at org.apache.commons.beanutils.converters.ConverterFacade.convert(ConverterFacade.java:61)
+	at org.apache.commons.beanutils.ConvertUtilsBean.convert(ConvertUtilsBean.java:491)
+	at com.opencsv.bean.ConverterPrimitiveTypes.convertToRead(ConverterPrimitiveTypes.java:118)
+	at com.opencsv.bean.BeanFieldSingleValue.convert(BeanFieldSingleValue.java:99)
+	at com.opencsv.bean.AbstractBeanField.setFieldValue(AbstractBeanField.java:182)
+	at com.opencsv.bean.AbstractMappingStrategy.setFieldValue(AbstractMappingStrategy.java:607)
+	at com.opencsv.bean.AbstractMappingStrategy.populateNewBean(AbstractMappingStrategy.java:330)
+	at com.opencsv.bean.concurrent.ProcessCsvLine.processLine(ProcessCsvLine.java:131)
+	at com.opencsv.bean.concurrent.ProcessCsvLine.run(ProcessCsvLine.java:87)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2021-01-15 21:34:19,185 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2021-01-15 21:34:49,725 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.1.6.Final
+2021-01-15 21:34:49,730 INFO org.springframework.boot.StartupInfoLogger [main] Starting CustomerStatementProcessorApplication using Java 1.8.0_191 on C02XG1J8JG5M with PID 15044 (/Users/vgavhane/Downloads/customer_statement_processor/target/classes started by vgavhane in /Users/vgavhane/Downloads/customer_statement_processor)
+2021-01-15 21:34:49,731 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-01-15 21:34:50,300 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8070 (http)
+2021-01-15 21:34:50,306 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8070"]
+2021-01-15 21:34:50,307 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2021-01-15 21:34:50,307 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-01-15 21:34:50,345 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2021-01-15 21:34:50,345 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 579 ms
+2021-01-15 21:34:50,498 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-15 21:34:50,607 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8070"]
+2021-01-15 21:34:50,629 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8070 (http) with context path ''
+2021-01-15 21:34:50,638 INFO org.springframework.boot.StartupInfoLogger [main] Started CustomerStatementProcessorApplication in 1.125 seconds (JVM running for 1.503)
+2021-01-15 21:34:55,572 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8070-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-15 21:34:55,573 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8070-exec-2] Initializing Servlet 'dispatcherServlet'
+2021-01-15 21:34:55,574 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8070-exec-2] Completed initialization in 1 ms
+2021-01-15 21:34:55,614 INFO com.rebobank.customer_statement_processor.controller.CustomerStatementProcessorController [http-nio-8070-exec-2] Parsing csv file ..records.xml
+2021-01-15 21:34:55,694 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8070-exec-2] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.RuntimeException: Error parsing CSV line: 7. [    <endBalance>8.12</endBalance>]] with root cause
+java.lang.NumberFormatException: For input string: "<endBalance>8.12</endBalance>"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Long.parseLong(Long.java:589)
+	at java.lang.Long.<init>(Long.java:965)
+	at org.apache.commons.beanutils.converters.NumberConverter.toNumber(NumberConverter.java:438)
+	at org.apache.commons.beanutils.converters.NumberConverter.convertToType(NumberConverter.java:271)
+	at org.apache.commons.beanutils.converters.AbstractConverter.convert(AbstractConverter.java:169)
+	at org.apache.commons.beanutils.converters.ConverterFacade.convert(ConverterFacade.java:61)
+	at org.apache.commons.beanutils.ConvertUtilsBean.convert(ConvertUtilsBean.java:491)
+	at com.opencsv.bean.ConverterPrimitiveTypes.convertToRead(ConverterPrimitiveTypes.java:118)
+	at com.opencsv.bean.BeanFieldSingleValue.convert(BeanFieldSingleValue.java:99)
+	at com.opencsv.bean.AbstractBeanField.setFieldValue(AbstractBeanField.java:182)
+	at com.opencsv.bean.AbstractMappingStrategy.setFieldValue(AbstractMappingStrategy.java:607)
+	at com.opencsv.bean.AbstractMappingStrategy.populateNewBean(AbstractMappingStrategy.java:330)
+	at com.opencsv.bean.concurrent.ProcessCsvLine.processLine(ProcessCsvLine.java:131)
+	at com.opencsv.bean.concurrent.ProcessCsvLine.run(ProcessCsvLine.java:87)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2021-01-15 21:35:53,149 INFO com.rebobank.customer_statement_processor.controller.CustomerStatementProcessorController [http-nio-8070-exec-4] Parsing xml file ..records.xml
+2021-01-15 21:35:53,152 INFO com.rebobank.customer_statement_processor.service.CustomerStatementProcessorServiceImpl [http-nio-8070-exec-4] Validating unique transction references...
+2021-01-15 21:35:53,152 INFO com.rebobank.customer_statement_processor.service.CustomerStatementProcessorServiceImpl [http-nio-8070-exec-4] Validating end balance...
+2021-01-15 21:35:53,153 INFO com.rebobank.customer_statement_processor.controller.CustomerStatementProcessorController [http-nio-8070-exec-4] Parsed xml file successfully ..records.xml
+2021-01-15 21:36:02,420 INFO com.rebobank.customer_statement_processor.controller.CustomerStatementProcessorController [http-nio-8070-exec-5] Parsing xml file ..records.xml
+2021-01-15 21:36:02,422 INFO com.rebobank.customer_statement_processor.service.CustomerStatementProcessorServiceImpl [http-nio-8070-exec-5] Validating unique transction references...
+2021-01-15 21:36:02,422 INFO com.rebobank.customer_statement_processor.service.CustomerStatementProcessorServiceImpl [http-nio-8070-exec-5] Validating end balance...
+2021-01-15 21:36:02,422 INFO com.rebobank.customer_statement_processor.controller.CustomerStatementProcessorController [http-nio-8070-exec-5] Parsed xml file successfully ..records.xml
+2021-01-15 21:38:47,309 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2021-01-15 21:39:16,236 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.1.6.Final
+2021-01-15 21:39:16,241 INFO org.springframework.boot.StartupInfoLogger [main] Starting CustomerStatementProcessorApplication using Java 1.8.0_191 on C02XG1J8JG5M with PID 15100 (/Users/vgavhane/Downloads/customer_statement_processor/target/classes started by vgavhane in /Users/vgavhane/Downloads/customer_statement_processor)
+2021-01-15 21:39:16,242 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-01-15 21:39:16,812 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8070 (http)
+2021-01-15 21:39:16,820 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8070"]
+2021-01-15 21:39:16,821 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2021-01-15 21:39:16,821 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-01-15 21:39:16,864 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2021-01-15 21:39:16,864 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 584 ms
+2021-01-15 21:39:17,023 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-15 21:39:17,128 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8070"]
+2021-01-15 21:39:17,150 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8070 (http) with context path ''
+2021-01-15 21:39:17,159 INFO org.springframework.boot.StartupInfoLogger [main] Started CustomerStatementProcessorApplication in 1.139 seconds (JVM running for 1.496)
+2021-01-15 21:39:21,287 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8070-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-15 21:39:21,288 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8070-exec-2] Initializing Servlet 'dispatcherServlet'
+2021-01-15 21:39:21,289 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8070-exec-2] Completed initialization in 1 ms
+2021-01-15 21:39:21,330 INFO com.rebobank.customer_statement_processor.controller.CustomerStatementProcessorController [http-nio-8070-exec-2] Parsing xml file ..records.xml
+2021-01-15 21:39:21,332 INFO com.rebobank.customer_statement_processor.service.CustomerStatementProcessorServiceImpl [http-nio-8070-exec-2] Validating unique transction references...
+2021-01-15 21:39:21,333 INFO com.rebobank.customer_statement_processor.service.CustomerStatementProcessorServiceImpl [http-nio-8070-exec-2] validation on unique transaction references is successful!!
+2021-01-15 21:39:21,333 INFO com.rebobank.customer_statement_processor.service.CustomerStatementProcessorServiceImpl [http-nio-8070-exec-2] Validating end balance...
+2021-01-15 21:39:21,333 ERROR com.rebobank.customer_statement_processor.service.CustomerStatementProcessorServiceImpl [http-nio-8070-exec-2] Transaction references::[167875, 130498, 172833, 150438, 165102] is not having valid end balance!!
+2021-01-15 21:43:13,453 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2021-01-15 21:43:22,484 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.1.6.Final
+2021-01-15 21:43:22,510 INFO org.springframework.boot.StartupInfoLogger [main] Starting CustomerStatementProcessorApplication using Java 1.8.0_191 on C02XG1J8JG5M with PID 15163 (/Users/vgavhane/Downloads/customer_statement_processor/target/classes started by vgavhane in /Users/vgavhane/Downloads/customer_statement_processor)
+2021-01-15 21:43:22,511 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-01-15 21:43:23,962 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8070 (http)
+2021-01-15 21:43:23,978 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8070"]
+2021-01-15 21:43:23,979 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2021-01-15 21:43:23,980 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-01-15 21:43:24,091 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2021-01-15 21:43:24,092 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1499 ms
+2021-01-15 21:43:24,474 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-15 21:43:24,771 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8070"]
+2021-01-15 21:43:24,815 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8070 (http) with context path ''
+2021-01-15 21:43:24,832 INFO org.springframework.boot.StartupInfoLogger [main] Started CustomerStatementProcessorApplication in 2.812 seconds (JVM running for 3.738)
+2021-01-15 21:43:46,440 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.1.6.Final
+2021-01-15 21:43:46,477 INFO org.springframework.boot.StartupInfoLogger [main] Starting CustomerStatementProcessorApplication using Java 1.8.0_191 on C02XG1J8JG5M with PID 15169 (/Users/vgavhane/Downloads/customer_statement_processor/target/classes started by vgavhane in /Users/vgavhane/Downloads/customer_statement_processor)
+2021-01-15 21:43:46,478 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-01-15 21:43:47,730 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8070 (http)
+2021-01-15 21:43:47,745 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8070"]
+2021-01-15 21:43:47,745 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2021-01-15 21:43:47,746 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-01-15 21:43:47,833 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2021-01-15 21:43:47,834 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1272 ms
+2021-01-15 21:43:48,183 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-15 21:43:48,387 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8070"]
+2021-01-15 21:43:48,431 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8070 (http) with context path ''
+2021-01-15 21:43:48,447 INFO org.springframework.boot.StartupInfoLogger [main] Started CustomerStatementProcessorApplication in 2.476 seconds (JVM running for 3.295)
+2021-01-15 21:43:54,779 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.1.6.Final
+2021-01-15 21:43:54,805 INFO org.springframework.boot.StartupInfoLogger [main] Starting CustomerStatementProcessorApplication using Java 1.8.0_191 on C02XG1J8JG5M with PID 15170 (/Users/vgavhane/Downloads/customer_statement_processor/target/classes started by vgavhane in /Users/vgavhane/Downloads/customer_statement_processor)
+2021-01-15 21:43:54,807 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-01-15 21:43:56,041 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8070 (http)
+2021-01-15 21:43:56,058 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8070"]
+2021-01-15 21:43:56,059 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2021-01-15 21:43:56,059 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-01-15 21:43:56,147 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2021-01-15 21:43:56,148 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1258 ms
+2021-01-15 21:43:56,455 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-15 21:43:56,702 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8070"]
+2021-01-15 21:43:56,725 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8070 is already in use
+2021-01-15 21:43:56,726 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Shutting down ExecutorService 'applicationTaskExecutor'
+2021-01-15 21:43:56,730 INFO org.apache.juli.logging.DirectJDKLog [main] Pausing ProtocolHandler ["http-nio-8070"]
+2021-01-15 21:43:56,730 INFO org.apache.juli.logging.DirectJDKLog [main] Stopping service [Tomcat]
+2021-01-15 21:43:56,734 INFO org.apache.juli.logging.DirectJDKLog [main] Stopping ProtocolHandler ["http-nio-8070"]
+2021-01-15 21:43:56,735 INFO org.apache.juli.logging.DirectJDKLog [main] Destroying ProtocolHandler ["http-nio-8070"]
+2021-01-15 21:43:56,742 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [main] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-01-15 21:43:56,768 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8070 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8070 or configure this application to listen on another port.
+
+2021-01-15 21:44:54,782 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.1.6.Final
+2021-01-15 21:44:54,810 INFO org.springframework.boot.StartupInfoLogger [main] Starting CustomerStatementProcessorApplication using Java 1.8.0_191 on C02XG1J8JG5M with PID 15178 (/Users/vgavhane/Downloads/customer_statement_processor/target/classes started by vgavhane in /Users/vgavhane/Downloads/customer_statement_processor)
+2021-01-15 21:44:54,811 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-01-15 21:44:56,038 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8070 (http)
+2021-01-15 21:44:56,056 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8070"]
+2021-01-15 21:44:56,057 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2021-01-15 21:44:56,057 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-01-15 21:44:56,150 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2021-01-15 21:44:56,150 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1257 ms
+2021-01-15 21:45:53,512 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-15 21:46:06,008 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8070"]
+2021-01-15 21:46:06,729 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8070 (http) with context path ''
+2021-01-15 21:46:07,589 INFO org.springframework.boot.StartupInfoLogger [main] Started CustomerStatementProcessorApplication in 73.323 seconds (JVM running for 74.264)
+2021-01-15 21:46:20,765 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8070-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-15 21:46:20,771 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8070-exec-1] Initializing Servlet 'dispatcherServlet'
+2021-01-15 21:46:20,906 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8070-exec-1] Completed initialization in 129 ms
+2021-01-15 21:46:34,381 INFO com.rebobank.customer_statement_processor.controller.CustomerStatementProcessorController [http-nio-8070-exec-1] Parsing xml file ..records.xml
+2021-01-15 21:47:56,849 INFO com.rebobank.customer_statement_processor.service.CustomerStatementProcessorServiceImpl [http-nio-8070-exec-1] Validating unique transction references...
+2021-01-15 21:48:18,999 INFO com.rebobank.customer_statement_processor.service.CustomerStatementProcessorServiceImpl [http-nio-8070-exec-1] validation on unique transaction references is successful!!
+2021-01-15 21:48:19,008 INFO com.rebobank.customer_statement_processor.service.CustomerStatementProcessorServiceImpl [http-nio-8070-exec-1] Validating end balance...
+2021-01-15 21:49:35,382 ERROR com.rebobank.customer_statement_processor.service.CustomerStatementProcessorServiceImpl [http-nio-8070-exec-1] Transaction references::[167875, 130498, 172833, 150438, 165102] is not having valid end balance!!
+2021-01-15 21:56:32,741 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.1.6.Final
+2021-01-15 21:56:32,750 INFO org.springframework.boot.StartupInfoLogger [main] Starting CustomerStatementProcessorApplication using Java 1.8.0_191 on C02XG1J8JG5M with PID 21547 (/Users/vgavhane/Downloads/customer_statement_processor/target/classes started by vgavhane in /Users/vgavhane/Downloads/customer_statement_processor)
+2021-01-15 21:56:32,751 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-01-15 21:56:33,618 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8070 (http)
+2021-01-15 21:56:33,628 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8070"]
+2021-01-15 21:56:33,629 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2021-01-15 21:56:33,629 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-01-15 21:56:33,697 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2021-01-15 21:56:33,698 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 881 ms
+2021-01-15 21:56:33,943 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-15 21:56:34,103 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8070"]
+2021-01-15 21:56:34,224 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8070 (http) with context path ''
+2021-01-15 21:56:34,239 INFO org.springframework.boot.StartupInfoLogger [main] Started CustomerStatementProcessorApplication in 1.81 seconds (JVM running for 2.39)
+2021-01-15 21:57:02,657 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8070-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-15 21:57:02,657 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8070-exec-2] Initializing Servlet 'dispatcherServlet'
+2021-01-15 21:57:02,658 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8070-exec-2] Completed initialization in 0 ms
+2021-01-15 21:57:02,705 INFO com.rebobank.customer_statement_processor.controller.CustomerStatementProcessorController [http-nio-8070-exec-2] Parsing xml file ..records.xml
+2021-01-15 21:57:02,707 INFO com.rebobank.customer_statement_processor.service.CustomerStatementProcessorServiceImpl [http-nio-8070-exec-2] Validating unique transction references...
+2021-01-15 21:57:02,708 INFO com.rebobank.customer_statement_processor.service.CustomerStatementProcessorServiceImpl [http-nio-8070-exec-2] validation on unique transaction references is successful!!
+2021-01-15 21:57:02,708 INFO com.rebobank.customer_statement_processor.service.CustomerStatementProcessorServiceImpl [http-nio-8070-exec-2] Validating end balance...
+2021-01-15 21:57:02,708 INFO com.rebobank.customer_statement_processor.service.CustomerStatementProcessorServiceImpl [http-nio-8070-exec-2] End Balance : 8.12
+2021-01-15 21:57:02,708 INFO com.rebobank.customer_statement_processor.service.CustomerStatementProcessorServiceImpl [http-nio-8070-exec-2] Calculated End Balance : 8.119999999999997
+2021-01-15 21:57:02,708 INFO com.rebobank.customer_statement_processor.service.CustomerStatementProcessorServiceImpl [http-nio-8070-exec-2] End Balance : 6368.0
+2021-01-15 21:57:02,709 INFO com.rebobank.customer_statement_processor.service.CustomerStatementProcessorServiceImpl [http-nio-8070-exec-2] Calculated End Balance : 4490.0
+2021-01-15 21:57:02,709 INFO com.rebobank.customer_statement_processor.service.CustomerStatementProcessorServiceImpl [http-nio-8070-exec-2] End Balance : 29.78
+2021-01-15 21:57:02,709 INFO com.rebobank.customer_statement_processor.service.CustomerStatementProcessorServiceImpl [http-nio-8070-exec-2] Calculated End Balance : 29.78
+2021-01-15 21:57:02,709 INFO com.rebobank.customer_statement_processor.service.CustomerStatementProcessorServiceImpl [http-nio-8070-exec-2] End Balance : 104.84
+2021-01-15 21:57:02,709 INFO com.rebobank.customer_statement_processor.service.CustomerStatementProcessorServiceImpl [http-nio-8070-exec-2] Calculated End Balance : 104.84
+2021-01-15 21:57:02,709 INFO com.rebobank.customer_statement_processor.service.CustomerStatementProcessorServiceImpl [http-nio-8070-exec-2] End Balance : 25.64
+2021-01-15 21:57:02,710 INFO com.rebobank.customer_statement_processor.service.CustomerStatementProcessorServiceImpl [http-nio-8070-exec-2] Calculated End Balance : 25.64
+2021-01-15 21:57:02,710 INFO com.rebobank.customer_statement_processor.service.CustomerStatementProcessorServiceImpl [http-nio-8070-exec-2] End Balance : 79.58
+2021-01-15 21:57:02,710 INFO com.rebobank.customer_statement_processor.service.CustomerStatementProcessorServiceImpl [http-nio-8070-exec-2] Calculated End Balance : 79.58
+2021-01-15 21:57:02,710 INFO com.rebobank.customer_statement_processor.service.CustomerStatementProcessorServiceImpl [http-nio-8070-exec-2] End Balance : 9.8
+2021-01-15 21:57:02,710 INFO com.rebobank.customer_statement_processor.service.CustomerStatementProcessorServiceImpl [http-nio-8070-exec-2] Calculated End Balance : 9.799999999999999
+2021-01-15 21:57:02,710 INFO com.rebobank.customer_statement_processor.service.CustomerStatementProcessorServiceImpl [http-nio-8070-exec-2] End Balance : 24.98
+2021-01-15 21:57:02,711 INFO com.rebobank.customer_statement_processor.service.CustomerStatementProcessorServiceImpl [http-nio-8070-exec-2] Calculated End Balance : 24.979999999999997
+2021-01-15 21:57:02,711 INFO com.rebobank.customer_statement_processor.service.CustomerStatementProcessorServiceImpl [http-nio-8070-exec-2] End Balance : 4981.0
+2021-01-15 21:57:02,711 INFO com.rebobank.customer_statement_processor.service.CustomerStatementProcessorServiceImpl [http-nio-8070-exec-2] Calculated End Balance : 4980.0
+2021-01-15 21:57:02,711 INFO com.rebobank.customer_statement_processor.service.CustomerStatementProcessorServiceImpl [http-nio-8070-exec-2] End Balance : 59.61
+2021-01-15 21:57:02,711 INFO com.rebobank.customer_statement_processor.service.CustomerStatementProcessorServiceImpl [http-nio-8070-exec-2] Calculated End Balance : 59.61
+2021-01-15 21:57:02,711 ERROR com.rebobank.customer_statement_processor.service.CustomerStatementProcessorServiceImpl [http-nio-8070-exec-2] Transaction references::[167875, 130498, 172833, 150438, 165102] is not having valid end balance!!
+2021-01-15 21:59:35,929 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2021-01-15 21:59:44,559 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.1.6.Final
+2021-01-15 21:59:44,568 INFO org.springframework.boot.StartupInfoLogger [main] Starting CustomerStatementProcessorApplication using Java 1.8.0_191 on C02XG1J8JG5M with PID 21598 (/Users/vgavhane/Downloads/customer_statement_processor/target/classes started by vgavhane in /Users/vgavhane/Downloads/customer_statement_processor)
+2021-01-15 21:59:44,569 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-01-15 21:59:45,366 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8070 (http)
+2021-01-15 21:59:45,375 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8070"]
+2021-01-15 21:59:45,376 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2021-01-15 21:59:45,376 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-01-15 21:59:45,433 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2021-01-15 21:59:45,433 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 813 ms
+2021-01-15 21:59:45,634 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-15 21:59:45,774 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8070"]
+2021-01-15 21:59:45,850 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8070 (http) with context path ''
+2021-01-15 21:59:45,860 INFO org.springframework.boot.StartupInfoLogger [main] Started CustomerStatementProcessorApplication in 1.599 seconds (JVM running for 2.092)
+2021-01-15 22:00:55,292 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8070-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-15 22:00:55,293 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8070-exec-1] Initializing Servlet 'dispatcherServlet'
+2021-01-15 22:00:55,294 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8070-exec-1] Completed initialization in 1 ms
+2021-01-15 22:00:55,338 INFO com.rebobank.customer_statement_processor.controller.CustomerStatementProcessorController [http-nio-8070-exec-1] Parsing xml file ..records.xml
+2021-01-15 22:00:55,341 INFO com.rebobank.customer_statement_processor.service.CustomerStatementProcessorServiceImpl [http-nio-8070-exec-1] Validating unique transction references...
+2021-01-15 22:00:55,341 INFO com.rebobank.customer_statement_processor.service.CustomerStatementProcessorServiceImpl [http-nio-8070-exec-1] validation on unique transaction references is successful!!
+2021-01-15 22:00:55,341 INFO com.rebobank.customer_statement_processor.service.CustomerStatementProcessorServiceImpl [http-nio-8070-exec-1] Validating end balance...
+2021-01-15 22:00:55,341 INFO com.rebobank.customer_statement_processor.service.CustomerStatementProcessorServiceImpl [http-nio-8070-exec-1] For transction reference::130498
+2021-01-15 22:00:55,341 INFO com.rebobank.customer_statement_processor.service.CustomerStatementProcessorServiceImpl [http-nio-8070-exec-1] End Balance : 8.12
+2021-01-15 22:00:55,342 INFO com.rebobank.customer_statement_processor.service.CustomerStatementProcessorServiceImpl [http-nio-8070-exec-1] Calculated End Balance : 8.119999999999997
+2021-01-15 22:00:55,342 INFO com.rebobank.customer_statement_processor.service.CustomerStatementProcessorServiceImpl [http-nio-8070-exec-1] For transction reference::167875
+2021-01-15 22:00:55,342 INFO com.rebobank.customer_statement_processor.service.CustomerStatementProcessorServiceImpl [http-nio-8070-exec-1] End Balance : 6368.0
+2021-01-15 22:00:55,342 INFO com.rebobank.customer_statement_processor.service.CustomerStatementProcessorServiceImpl [http-nio-8070-exec-1] Calculated End Balance : 4490.0
+2021-01-15 22:00:55,342 INFO com.rebobank.customer_statement_processor.service.CustomerStatementProcessorServiceImpl [http-nio-8070-exec-1] For transction reference::147674
+2021-01-15 22:00:55,342 INFO com.rebobank.customer_statement_processor.service.CustomerStatementProcessorServiceImpl [http-nio-8070-exec-1] End Balance : 29.78
+2021-01-15 22:00:55,343 INFO com.rebobank.customer_statement_processor.service.CustomerStatementProcessorServiceImpl [http-nio-8070-exec-1] Calculated End Balance : 29.78
+2021-01-15 22:00:55,343 INFO com.rebobank.customer_statement_processor.service.CustomerStatementProcessorServiceImpl [http-nio-8070-exec-1] For transction reference::135607
+2021-01-15 22:00:55,343 INFO com.rebobank.customer_statement_processor.service.CustomerStatementProcessorServiceImpl [http-nio-8070-exec-1] End Balance : 104.84
+2021-01-15 22:00:55,343 INFO com.rebobank.customer_statement_processor.service.CustomerStatementProcessorServiceImpl [http-nio-8070-exec-1] Calculated End Balance : 104.84
+2021-01-15 22:00:55,343 INFO com.rebobank.customer_statement_processor.service.CustomerStatementProcessorServiceImpl [http-nio-8070-exec-1] For transction reference::169639
+2021-01-15 22:00:55,343 INFO com.rebobank.customer_statement_processor.service.CustomerStatementProcessorServiceImpl [http-nio-8070-exec-1] End Balance : 25.64
+2021-01-15 22:00:55,343 INFO com.rebobank.customer_statement_processor.service.CustomerStatementProcessorServiceImpl [http-nio-8070-exec-1] Calculated End Balance : 25.64
+2021-01-15 22:00:55,344 INFO com.rebobank.customer_statement_processor.service.CustomerStatementProcessorServiceImpl [http-nio-8070-exec-1] For transction reference::105549
+2021-01-15 22:00:55,344 INFO com.rebobank.customer_statement_processor.service.CustomerStatementProcessorServiceImpl [http-nio-8070-exec-1] End Balance : 79.58
+2021-01-15 22:00:55,344 INFO com.rebobank.customer_statement_processor.service.CustomerStatementProcessorServiceImpl [http-nio-8070-exec-1] Calculated End Balance : 79.58
+2021-01-15 22:00:55,344 INFO com.rebobank.customer_statement_processor.service.CustomerStatementProcessorServiceImpl [http-nio-8070-exec-1] For transction reference::150438
+2021-01-15 22:00:55,344 INFO com.rebobank.customer_statement_processor.service.CustomerStatementProcessorServiceImpl [http-nio-8070-exec-1] End Balance : 9.8
+2021-01-15 22:00:55,344 INFO com.rebobank.customer_statement_processor.service.CustomerStatementProcessorServiceImpl [http-nio-8070-exec-1] Calculated End Balance : 9.799999999999999
+2021-01-15 22:00:55,344 INFO com.rebobank.customer_statement_processor.service.CustomerStatementProcessorServiceImpl [http-nio-8070-exec-1] For transction reference::172833
+2021-01-15 22:00:55,344 INFO com.rebobank.customer_statement_processor.service.CustomerStatementProcessorServiceImpl [http-nio-8070-exec-1] End Balance : 24.98
+2021-01-15 22:00:55,345 INFO com.rebobank.customer_statement_processor.service.CustomerStatementProcessorServiceImpl [http-nio-8070-exec-1] Calculated End Balance : 24.979999999999997
+2021-01-15 22:00:55,345 INFO com.rebobank.customer_statement_processor.service.CustomerStatementProcessorServiceImpl [http-nio-8070-exec-1] For transction reference::165102
+2021-01-15 22:00:55,345 INFO com.rebobank.customer_statement_processor.service.CustomerStatementProcessorServiceImpl [http-nio-8070-exec-1] End Balance : 4981.0
+2021-01-15 22:00:55,345 INFO com.rebobank.customer_statement_processor.service.CustomerStatementProcessorServiceImpl [http-nio-8070-exec-1] Calculated End Balance : 4980.0
+2021-01-15 22:00:55,345 INFO com.rebobank.customer_statement_processor.service.CustomerStatementProcessorServiceImpl [http-nio-8070-exec-1] For transction reference::170148
+2021-01-15 22:00:55,345 INFO com.rebobank.customer_statement_processor.service.CustomerStatementProcessorServiceImpl [http-nio-8070-exec-1] End Balance : 59.61
+2021-01-15 22:00:55,345 INFO com.rebobank.customer_statement_processor.service.CustomerStatementProcessorServiceImpl [http-nio-8070-exec-1] Calculated End Balance : 59.61
+2021-01-15 22:00:55,346 ERROR com.rebobank.customer_statement_processor.service.CustomerStatementProcessorServiceImpl [http-nio-8070-exec-1] Transaction references::[167875, 130498, 172833, 150438, 165102] is not having valid end balance!!

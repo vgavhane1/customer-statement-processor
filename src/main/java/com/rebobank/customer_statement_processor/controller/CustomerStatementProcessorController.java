@@ -59,9 +59,9 @@ public class CustomerStatementProcessorController {
 		// authentication and authorization layer
 		if(xmlCustomerStatementDto.getFile()!=null) {
 		logger.info("Parsing xml file .."+ xmlCustomerStatementDto.getFile().getOriginalFilename());
-		if(!xmlCustomerStatementDto.getFile().getOriginalFilename().contains(".csv")) {
+		if(!xmlCustomerStatementDto.getFile().getOriginalFilename().contains(".xml")) {
 			logger.error("Provide valid xml file for processing!!! "+xmlCustomerStatementDto.getFile().getOriginalFilename());
-			throw new CustomerStatementProcessorException(HttpStatus.BAD_REQUEST, "Provide valid csv file for processing!!! " +xmlCustomerStatementDto.getFile().getOriginalFilename());
+			throw new CustomerStatementProcessorException(HttpStatus.BAD_REQUEST, "Provide valid xml file for processing!!! " +xmlCustomerStatementDto.getFile().getOriginalFilename());
 		}
 		customerStatementProcessorService.parseXmlAndSave(xmlCustomerStatementDto);
 		logger.info("Parsed xml file successfully .."+ xmlCustomerStatementDto.getFile().getOriginalFilename());

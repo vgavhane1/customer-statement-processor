@@ -25,14 +25,15 @@ public class CustomXMLParser {
 	
 	private static final Logger logger = (Logger) LoggerFactory.getLogger(CustomXMLParser.class);
 	
-	@Autowired
-	private SAXParserHandler saxParserHandler;
+	//@Autowired
+	//private SAXParserHandler saxParserHandler;
 	
 	public List<CustomerStatementRecord> parse(InputStream inputStream) throws IOException {
 		List<CustomerStatementRecord> customerStatementRecordList = new ArrayList<CustomerStatementRecord>();
 		SAXParserFactory saxParserFactory = SAXParserFactory.newInstance();
 	    try {
 	        SAXParser saxParser = saxParserFactory.newSAXParser();
+	        SAXParserHandler saxParserHandler = new SAXParserHandler();
 	        logger.debug("Parsing of customer statements records from xml file ..");
 	        saxParser.parse(inputStream, saxParserHandler);
 	        logger.debug("Parsing of customer statements records from xml file is successful!!");	

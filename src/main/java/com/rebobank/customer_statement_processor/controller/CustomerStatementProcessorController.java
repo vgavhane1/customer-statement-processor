@@ -20,7 +20,7 @@ import com.rebobank.customer_statement_processor.service.CustomerStatementProces
 
 import ch.qos.logback.classic.Logger;
 /**
- *  Controller class to process customer statements in the CSV or XML format
+ *  Controller class to process customer statements in CSV or XML format
  *  @author vgavhane
  */
 @RestController
@@ -35,40 +35,38 @@ public class CustomerStatementProcessorController {
 	@PostMapping("csv")
 	@Consumes(MediaType.MULTIPART_FORM_DATA_VALUE)
 	public CustomerStatementProcessorReportDto createCSVCustomerStatement(@ModelAttribute CustomerStatementDto csvCustomerStatementDto) throws IOException {
-		// convert this dto to model object which we can persist into database
-		// authentication and authorization layer
+		CustomerStatementProcessorReportDto customerStatementProcessorReportDto = null;
 		if(csvCustomerStatementDto.getFile()!=null) {
 			if(!csvCustomerStatementDto.getFile().getOriginalFilename().contains(".csv")) {
 				logger.error("Provide valid csv file for processing!!! "+csvCustomerStatementDto.getFile().getOriginalFilename());
 				throw new CustomerStatementProcessorException(HttpStatus.BAD_REQUEST, "Provide valid csv file for processing!!! "+csvCustomerStatementDto.getFile().getOriginalFilename());
 			}
 			logger.info("Parsing csv file .."+ csvCustomerStatementDto.getFile().getOriginalFilename());
-			customerStatementProcessorService.parseCsvAndSave(csvCustomerStatementDto);
+			customerStatementProcessorReportDto = customerStatementProcessorService.parseFileAndSave(csvCustomerStatementDto);
 			logger.info("Parsed csv file successfully .."+ csvCustomerStatementDto.getFile().getOriginalFilename());
 		} else {
 			logger.error("Provide csv file for processing!!!");
 			throw new CustomerStatementProcessorException(HttpStatus.BAD_REQUEST, "Provide csv file for processing!!!");
 		}
-		return csvCustomerStatementDto.getCustomerStatementProcessorReportDto();
+		return customerStatementProcessorReportDto;
 	}
 	
 	@PostMapping("xml")
 	@Consumes(MediaType.MULTIPART_FORM_DATA_VALUE)
 	public CustomerStatementProcessorReportDto createXMLCustomerStatement(@ModelAttribute CustomerStatementDto xmlCustomerStatementDto) throws IOException {
-		// convert this dto to model object which we can persist into database
-		// authentication and authorization layer
+		CustomerStatementProcessorReportDto customerStatementProcessorReportDto = null;
 		if(xmlCustomerStatementDto.getFile()!=null) {
 		logger.info("Parsing xml file .."+ xmlCustomerStatementDto.getFile().getOriginalFilename());
 		if(!xmlCustomerStatementDto.getFile().getOriginalFilename().contains(".xml")) {
 			logger.error("Provide valid xml file for processing!!! "+xmlCustomerStatementDto.getFile().getOriginalFilename());
 			throw new CustomerStatementProcessorException(HttpStatus.BAD_REQUEST, "Provide valid xml file for processing!!! " +xmlCustomerStatementDto.getFile().getOriginalFilename());
 		}
-		customerStatementProcessorService.parseXmlAndSave(xmlCustomerStatementDto);
+		customerStatementProcessorReportDto = customerStatementProcessorService.parseFileAndSave(xmlCustomerStatementDto);
 		logger.info("Parsed xml file successfully .."+ xmlCustomerStatementDto.getFile().getOriginalFilename());
 		} else {
 			logger.error("Provide xml file for processing!!!");
 			throw new CustomerStatementProcessorException(HttpStatus.BAD_REQUEST, "Provide xml file for processing!!!");
 		}
-		return xmlCustomerStatementDto.getCustomerStatementProcessorReportDto();
+		return customerStatementProcessorReportDto;
 	}
 }

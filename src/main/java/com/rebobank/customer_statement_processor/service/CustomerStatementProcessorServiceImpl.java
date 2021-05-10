@@ -36,7 +36,7 @@ public class CustomerStatementProcessorServiceImpl implements CustomerStatementP
 	private CustomXMLParser customXMLParser;
 	
 	@Override
-	public CustomerStatementDto validateUniqueTransactionReferences(List<CustomerStatementRecord> CustomerStatementRecords, CustomerStatementDto customerStatementDto) {
+	public CustomerStatementProcessorReportDto validateUniqueTransactionReferences(List<CustomerStatementRecord> CustomerStatementRecords, CustomerStatementProcessorReportDto customerStatementProcessorReportDto) {
 		Set<Long> transactionReferencesSet = new HashSet<Long>();
 		String errorMessage = "";
 		LinkedHashMap<Long, String> report = new LinkedHashMap<Long, String>();
@@ -51,18 +51,15 @@ public class CustomerStatementProcessorServiceImpl implements CustomerStatementP
 				//throw new CustomerStatementProcessorException(HttpStatus.BAD_REQUEST, errorMessage);
 			}
 		}
-		CustomerStatementProcessorReportDto reportDto = customerStatementDto.getCustomerStatementProcessorReportDto();
-		reportDto.setReport(report);
-		customerStatementDto.setCustomerStatementProcessorReportDto(reportDto);
 		logger.info("validation on unique transaction references is successful!!");
-		
-		return customerStatementDto;
+		customerStatementProcessorReportDto.setReport(report);
+		return customerStatementProcessorReportDto;
 	}
 
 	@Override
-	public CustomerStatementDto validateEndBalance(List<CustomerStatementRecord> CustomerStatementRecords, CustomerStatementDto customerStatementDto) {
+	public CustomerStatementProcessorReportDto validateEndBalance(List<CustomerStatementRecord> CustomerStatementRecords, CustomerStatementProcessorReportDto customerStatementProcessorReportDto) {
 		Set<Long> transactionReferencesSet = new HashSet<Long>();
-		LinkedHashMap<Long, String> report = customerStatementDto.getCustomerStatementProcessorReportDto().getReport();
+		LinkedHashMap<Long, String> report = customerStatementProcessorReportDto.getReport();
 		String errorMessage = "";
 		for (CustomerStatementRecord CustomerStatementRecord : CustomerStatementRecords) {
 			logger.info("For transction reference::" + CustomerStatementRecord.getTransactionReference());
@@ -92,39 +89,35 @@ public class CustomerStatementProcessorServiceImpl implements CustomerStatementP
 			//Note- We are not throwing below exception as we are generating the report in json format in case customer statements get failed during validation.
 			//throw new CustomerStatementProcessorException(HttpStatus.BAD_REQUEST, errorMessage);
 		}
-		
-		CustomerStatementProcessorReportDto reportDto = customerStatementDto.getCustomerStatementProcessorReportDto();
-		reportDto.setReport(report);
-		customerStatementDto.setCustomerStatementProcessorReportDto(reportDto);
+		customerStatementProcessorReportDto.setReport(report);
 		logger.info("validation on end balance is successful!!");
 		
-		return customerStatementDto;
+		return customerStatementProcessorReportDto;
 	}
 
 	@Override
-	public CustomerStatementDto parseCsvAndSave(CustomerStatementDto csvCustomerStatementDto) throws IOException {
-		List<CustomerStatementRecord> CustomerStatementRecord = null;
-		if (csvCustomerStatementDto.getFile() != null)
-			CustomerStatementRecord = customCSVParser.parse(csvCustomerStatementDto.getFile().getInputStream());
-		logger.info("Validating unique transction references...");
-		csvCustomerStatementDto = validateUniqueTransactionReferences(CustomerStatementRecord, csvCustomerStatementDto);
-		logger.info("Validating end balance...");
-		csvCustomerStatementDto = validateEndBalance(CustomerStatementRecord, csvCustomerStatementDto);
-		
-		return csvCustomerStatementDto;
+	public CustomerStatementProcessorReportDto parseFileAndSave(CustomerStatementDto customerStatementDto)
+			throws IOException {
+		List<CustomerStatementRecord> customerStatementRecordList = null;
+		CustomerStatementProcessorReportDto customerStatementProcessorReportDto = new CustomerStatementProcessorReportDto();
+		if (customerStatementDto.getFile() != null) {
+			if (customerStatementDto.getFile().getOriginalFilename().contains(".csv")) {
+				customerStatementRecordList = customCSVParser.parse(customerStatementDto.getFile().getInputStream());
+			} else if (customerStatementDto.getFile().getOriginalFilename().contains(".xml")) {
+				customerStatementRecordList = customXMLParser.parse(customerStatementDto.getFile().getInputStream());
+			}
+		}
+		customerStatementProcessorReportDto = validateCustomerStatementRecordsFromFile(customerStatementRecordList,
+				customerStatementProcessorReportDto);
+		return customerStatementProcessorReportDto;
 	}
 
-	@Override
-	public CustomerStatementDto parseXmlAndSave(CustomerStatementDto xmlCustomerStatementDto) throws IOException {
-		List<CustomerStatementRecord> CustomerStatementRecord = null;
-		if (xmlCustomerStatementDto.getFile() != null)
-			CustomerStatementRecord = customXMLParser.parse(xmlCustomerStatementDto.getFile().getInputStream());
+	private CustomerStatementProcessorReportDto validateCustomerStatementRecordsFromFile(List<CustomerStatementRecord> customerStatementRecordList, CustomerStatementProcessorReportDto customerStatementProcessorReportDto){
 		logger.info("Validating unique transction references...");
-		xmlCustomerStatementDto = validateUniqueTransactionReferences(CustomerStatementRecord, xmlCustomerStatementDto);
+		customerStatementProcessorReportDto = validateUniqueTransactionReferences(customerStatementRecordList, customerStatementProcessorReportDto);
 		logger.info("Validating end balance...");
-		xmlCustomerStatementDto = validateEndBalance(CustomerStatementRecord, xmlCustomerStatementDto);
+		customerStatementProcessorReportDto = validateEndBalance(customerStatementRecordList, customerStatementProcessorReportDto);
 		
-		return xmlCustomerStatementDto;
+		return customerStatementProcessorReportDto;
 	}
-
 }

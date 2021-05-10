@@ -1,24 +1,19 @@
 package com.rebobank.customer_statement_processor.service;
 
-import java.io.IOException;
 import java.util.List;
 
-import com.rebobank.customer_statement_processor.dto.CustomerStatementDto;
+import com.rebobank.customer_statement_processor.dto.CustomerStatementProcessorReportDto;
 import com.rebobank.customer_statement_processor.model.CustomerStatementRecord;
 
 /**
- *  Service interface which declares the methods required for parsing and validating
- *  customer statements in xml or csv format
+ *  Service interface which declares the methods required for validating
+ *  customer statements.
  *  @author vgavhane
  */
 
-public interface CustomerStatementProcessorService {
+public interface CustomerStatementProcessorService extends CustomerStatementParserService {
 	
-	public CustomerStatementDto validateUniqueTransactionReferences(List<CustomerStatementRecord> CustomerStatementRecord, CustomerStatementDto customerStatementDto);
+	public CustomerStatementProcessorReportDto validateUniqueTransactionReferences(List<CustomerStatementRecord> CustomerStatementRecord, CustomerStatementProcessorReportDto customerStatementProcessorReportDto);
 	
-	public CustomerStatementDto validateEndBalance(List<CustomerStatementRecord> CustomerStatementRecords, CustomerStatementDto customerStatementDto);
-	
-	public CustomerStatementDto parseCsvAndSave(CustomerStatementDto csvCustomerStatementDto) throws IOException;
-	
-	public CustomerStatementDto parseXmlAndSave(CustomerStatementDto xmlCustomerStatementDto) throws IOException;
+	public CustomerStatementProcessorReportDto validateEndBalance(List<CustomerStatementRecord> CustomerStatementRecords, CustomerStatementProcessorReportDto customerStatementProcessorReportDto);
 }

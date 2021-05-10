@@ -10,7 +10,6 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.rebobank.customer_statement_processor.dto.CustomerStatementDto;
 import com.rebobank.customer_statement_processor.dto.CustomerStatementProcessorReportDto;
 import com.rebobank.customer_statement_processor.model.CustomerStatementRecord;
 import com.rebobank.customer_statement_processor.service.CustomerStatementProcessorService;
@@ -27,13 +26,10 @@ public class CustomerStatementProcessorApplicationTests {
 	}
 
 	@Test
-	public void testValidateUniqueTransactionReferences(){
+	public void testValidateEndBalance(){
 		List<CustomerStatementRecord> customerStatementRecords = new ArrayList<>();
 		CustomerStatementProcessorReportDto customerStatementProcessorReportDto = new CustomerStatementProcessorReportDto();
-
 		customerStatementProcessorReportDto.setReport(new LinkedHashMap<>());
-		CustomerStatementDto customerStatementDto = new CustomerStatementDto();
-		customerStatementDto.setCustomerStatementProcessorReportDto(customerStatementProcessorReportDto);
 		CustomerStatementRecord customerStatementRecord = new CustomerStatementRecord();
 		customerStatementRecord.setStartBalance(1234.00);
 		customerStatementRecord.setMutation(1234.00);
@@ -42,8 +38,66 @@ public class CustomerStatementProcessorApplicationTests {
 
 		customerStatementRecords.add(customerStatementRecord);
 
-		customerStatementDto = customerStatementProcessorService.validateEndBalance(customerStatementRecords, customerStatementDto);
-		Assert.assertEquals(customerStatementDto.getCustomerStatementProcessorReportDto().getReport().size(), 0);
+		customerStatementProcessorReportDto = customerStatementProcessorService.validateEndBalance(customerStatementRecords, customerStatementProcessorReportDto);
+		Assert.assertEquals(customerStatementProcessorReportDto.getReport().size(), 0);
+	}
+	
+	@Test
+	public void testWrongValidateEndBalance(){
+		List<CustomerStatementRecord> customerStatementRecords = new ArrayList<>();
+		CustomerStatementProcessorReportDto customerStatementProcessorReportDto = new CustomerStatementProcessorReportDto();
+		customerStatementProcessorReportDto.setReport(new LinkedHashMap<>());
+		CustomerStatementRecord customerStatementRecord = new CustomerStatementRecord();
+		customerStatementRecord.setStartBalance(1234.00);
+		customerStatementRecord.setMutation(1234.00);
+		customerStatementRecord.setTransactionReference(1234l);
+		customerStatementRecord.setEndBalance(2469.00);
+
+		customerStatementRecords.add(customerStatementRecord);
+
+		customerStatementProcessorReportDto = customerStatementProcessorService.validateEndBalance(customerStatementRecords, customerStatementProcessorReportDto);
+		Assert.assertEquals(customerStatementProcessorReportDto.getReport().size(), 1);
+	}
+	
+	@Test
+	public void testValidateUniqueTransactionReferences(){
+		List<CustomerStatementRecord> customerStatementRecords = new ArrayList<>();
+		CustomerStatementProcessorReportDto customerStatementProcessorReportDto = new CustomerStatementProcessorReportDto();
+		customerStatementProcessorReportDto.setReport(new LinkedHashMap<>());
+		CustomerStatementRecord customerStatementRecord = new CustomerStatementRecord();
+		customerStatementRecord.setStartBalance(1234.00);
+		customerStatementRecord.setMutation(1234.00);
+		customerStatementRecord.setTransactionReference(1234l);
+		customerStatementRecord.setEndBalance(2468.00);
+		
+		CustomerStatementRecord customerStatementRecord1 = new CustomerStatementRecord();
+		customerStatementRecord1.setTransactionReference(12345l);
+
+		customerStatementRecords.add(customerStatementRecord);
+		customerStatementRecords.add(customerStatementRecord1);
+
+		customerStatementProcessorReportDto = customerStatementProcessorService.validateUniqueTransactionReferences(customerStatementRecords, customerStatementProcessorReportDto);
+		Assert.assertEquals(customerStatementProcessorReportDto.getReport().size(), 0);
 	}
 
+	@Test
+	public void testValidateDuplicateTransactionReferences(){
+		List<CustomerStatementRecord> customerStatementRecords = new ArrayList<>();
+		CustomerStatementProcessorReportDto customerStatementProcessorReportDto = new CustomerStatementProcessorReportDto();
+		customerStatementProcessorReportDto.setReport(new LinkedHashMap<>());
+		CustomerStatementRecord customerStatementRecord = new CustomerStatementRecord();
+		customerStatementRecord.setStartBalance(1234.00);
+		customerStatementRecord.setMutation(1234.00);
+		customerStatementRecord.setTransactionReference(1234l);
+		customerStatementRecord.setEndBalance(2468.00);
+		
+		CustomerStatementRecord customerStatementRecord1 = new CustomerStatementRecord();
+		customerStatementRecord1.setTransactionReference(1234l);
+
+		customerStatementRecords.add(customerStatementRecord);
+		customerStatementRecords.add(customerStatementRecord1);
+
+		customerStatementProcessorReportDto = customerStatementProcessorService.validateUniqueTransactionReferences(customerStatementRecords, customerStatementProcessorReportDto);
+		Assert.assertEquals(customerStatementProcessorReportDto.getReport().size(), 1);
+	}
 }

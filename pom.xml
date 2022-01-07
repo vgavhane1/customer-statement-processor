@@ -31,22 +31,52 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-security</artifactId>
     </dependency> -->
+    <!-- Swagger dependencies -->
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+			<version>2.9.2</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+			<version>2.9.2</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+               <groupId>io.swagger</groupId>
+               <artifactId>swagger-annotations</artifactId>
+               <version>1.5.22</version>
+           </dependency>
+           <dependency>
+               <groupId>io.swagger</groupId>
+               <artifactId>swagger-models</artifactId>
+               <version>1.5.22</version>
+           </dependency>
+		<!-- ======================= -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
-      <groupId>com.opencsv</groupId>
-      <artifactId>opencsv</artifactId>
-      <version>5.3</version>
-  </dependency>
-  <dependency>
-			<groupId>org.modelmapper</groupId>
-			<artifactId>modelmapper</artifactId>
-			<version>1.1.0</version>
-		</dependency>
-	</dependencies>
+			<dependency>
+      			<groupId>com.opencsv</groupId>
+      			<artifactId>opencsv</artifactId>
+     			 <version>5.3</version>
+ 			 </dependency>
+  			<dependency>
+				<groupId>org.modelmapper</groupId>
+				<artifactId>modelmapper</artifactId>
+				<version>1.1.0</version>
+			</dependency>
+			<dependency>
+    			<groupId>net.minidev</groupId>
+    			<artifactId>json-smart</artifactId>
+    			<version>2.4.7</version>
+			</dependency>
+		</dependencies>
+	
 
 	<build>
 		<plugins>

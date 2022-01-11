@@ -1,4 +1,4 @@
-package com.rebobank.customer_statement_processor.security.filter;
+/*package com.rebobank.customer_statement_processor.security.filter;
 
 import java.io.IOException;
 
@@ -16,11 +16,11 @@ import org.springframework.stereotype.Component;
 
 import ch.qos.logback.classic.Logger;
 
-/**
+*//**
  * Basic authentication filter to check whether provided credentials in base auth of request header is valid
  * @author vgavhane
  *
- */
+ *//*
 
 @Component
 public class CustomerStatementAPIAuthenticationFilter implements Filter{
@@ -77,3 +77,4 @@ public class CustomerStatementAPIAuthenticationFilter implements Filter{
     }
 
 }
+*/
